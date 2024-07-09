@@ -14,7 +14,7 @@ pdfDoc.text("This is my!", 100, 100);
 // const imagePath = "./node.jpeg";
 
 // Add an image
-pdfDoc.image("./image.png", {
+pdfDoc.image("image.png", {
   fit: [250, 300],
   align: "center",
   valign: "center",

@@ -15,9 +15,9 @@ router.get("/:id", (req, res, next) => {
   }
 });
 
-router.post("/", (req, res, next) => {
+router.post("/", async (req, res, next) => {
   try {
-    const data = PDFcontroller.createPDF(req.body);
+    const data = await PDFcontroller.createPDF(req.body);
     res.json({ data: data, msg: "Posting new data" });
   } catch (e) {
     next(e);

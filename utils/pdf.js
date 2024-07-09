@@ -1,5 +1,6 @@
 const PDFDocument = require("pdfkit");
 const fs = require("fs");
+const { Module } = require("module");
 // Create a new PDF document
 const pdfDoc = new PDFDocument();
 
@@ -24,3 +25,4 @@ pdfDoc.image("image.png", {
 pdfDoc.end();
 
 console.log("PDF generated successfully:");
+module.exports = pdfDoc;
